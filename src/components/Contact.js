@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 import { GrPhone, GrMail, GrLocation } from "react-icons/gr";
@@ -8,7 +8,18 @@ const Contact = () => {
   const Service_ID = "service_id";
   const Template_ID = "template_gy6l33d";
   const user_ID = "user_eHn01qGgscfXzjcPRKntA";
-  
+  const { successMessage, setSuccessMessage } = useState("");
+  const sendEmail = (Service_ID, Template_ID, variables, user_ID) => {
+    emailjs
+      .send(Service_ID, Template_ID, variables, user_ID)
+      .then(() => {
+        setSuccessMessage(
+          "Form sent successfully, I will contact you as soon as possible"
+        );
+      })
+      .catch((err) => console.error(`something went wrong ${err}`));
+  };
+
   return (
     <div id="lara-main">
       <section id="lara-contact">
@@ -51,6 +62,9 @@ const Contact = () => {
                   <p>Toronto, ON. Canada</p>
                 </div>
               </div>          
+            </div>
+            <div className="col-md-7 col-md-push-1">
+
             </div>
           </div>
         </div>
