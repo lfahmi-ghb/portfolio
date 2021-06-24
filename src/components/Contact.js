@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 
 import { GrPhone, GrMail, GrLocation } from "react-icons/gr";
@@ -9,6 +10,24 @@ const Contact = () => {
   const Template_ID = "template_gy6l33d";
   const user_ID = "user_eHn01qGgscfXzjcPRKntA";
   const { successMessage, setSuccessMessage } = useState("");
+  const {handleSubmit} = useForm();
+  
+  const onSubmit = (data, r) => {
+    sendEmail(
+      Service_ID,
+      Template_ID,
+      {
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        subject: data.subject,
+        description: data.description,
+      },
+      user_ID
+    );
+    r.target.reset();
+  };
+
   const sendEmail = (Service_ID, Template_ID, variables, user_ID) => {
     emailjs
       .send(Service_ID, Template_ID, variables, user_ID)
@@ -66,7 +85,7 @@ const Contact = () => {
             <div className="col-md-7 col-md-push-1">
               <div className="row">
                 <div className="col-md-10 col-md-offset-1 col-md-pull-1">
-                  <form >
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <input
                         type="text"
