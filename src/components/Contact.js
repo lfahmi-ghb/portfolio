@@ -1,8 +1,14 @@
 import React from "react";
+import emailjs from "emailjs-com";
+
 import { GrPhone, GrMail, GrLocation } from "react-icons/gr";
 import { FaPhoneAlt, FaLocationArrow } from "react-icons/fa";
 
 const Contact = () => {
+  const Service_ID = "service_id";
+  const Template_ID = "template_gy6l33d";
+  const user_ID = "user_eHn01qGgscfXzjcPRKntA";
+  
   return (
     <div id="lara-main">
       <section id="lara-contact">
