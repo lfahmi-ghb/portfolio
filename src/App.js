@@ -1,13 +1,16 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
-import Navbar from './components/navbar'
-import Header from './components/header'
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Head from "./components/Head";
 function App() {
   return (
-  <>
-    <Navbar/>
-    <Header/>
-  </>
+    <div className="App">
+      <div id="lara-page">
+        <div className="container-wrap">
+          <Head />
+        </div>
+      </div>
+    </div>
   );
 }
 
