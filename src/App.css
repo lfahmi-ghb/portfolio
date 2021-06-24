@@ -194,3 +194,59 @@ svg:not(:root).svg-inline--fa {
     padding-bottom: 8em;
   }
 }
+
+/* * * * * * * * * * * * * * * * * * * * * * * C O N T A C T S * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#lara-contact {
+  padding-top: 4em;
+  padding-bottom: 9em;
+  clear: both;
+  width: 100%;
+  display: block;
+}
+
+.lara-narrow-content {
+  padding: 0 2.5em;
+}
+
+.row{
+  display: block !important;
+}
+
+.lara-feature {
+  text-align: left;
+  width: 100%;
+  float: left;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.lara-feature .contact-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  display: table;
+  text-align: center;
+  color: var(--font-color);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.lara-feature.lara-feature-sm .contact-text {
+  margin-top: 30px;
+}
+
+.lara-feature .contact-text {
+  padding-left: 120px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.lara-feature .contact-icon  {
+  margin: 2.9rem 0;
+
+}
