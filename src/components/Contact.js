@@ -61,10 +61,58 @@ const Contact = () => {
                 <div class="contact-text">
                   <p>Toronto, ON. Canada</p>
                 </div>
-              </div>          
+              </div>
             </div>
             <div className="col-md-7 col-md-push-1">
-
+              <div className="row">
+                <div className="col-md-10 col-md-offset-1 col-md-pull-1">
+                  <form >
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Name"
+                        name="name"                                              
+                      />
+                    </div>
+                    <div className="form-group">
+                      <input
+                        id="email"
+                        type="email"
+                        className="form-control"
+                        placeholder="Email"
+                        name="email"
+                      ></input>
+                    </div>
+                    <div className="form-group">
+                      <input
+                        id="subject"
+                        type="text"
+                        className="form-control"
+                        placeholder="Subject"
+                        name="subject"
+                      ></input>
+                    </div>
+                    <div className="form-group">
+                      <textarea
+                        id="description"
+                        type="text"
+                        className="form-control"
+                        placeholder="Description"
+                        name="description"
+                      ></textarea>
+                    </div>
+                    <div className="form-group">
+                      <button
+                        className="btn-main-offer contact-button"
+                        type="submit"
+                      >
+                        contact me
+                      </button>
+                    </div>{" "}
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
