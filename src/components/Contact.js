@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
-
+import { useForm } from "react-hook-form";
 import { GrPhone, GrMail, GrLocation } from "react-icons/gr";
 import { FaPhoneAlt, FaLocationArrow } from "react-icons/fa";
-
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const { successMessage, setSuccessMessage } = useState("");
   const Service_ID = "service_id";
   const Template_ID = "template_gy6l33d";
   const user_ID = "user_eHn01qGgscfXzjcPRKntA";
-  const { successMessage, setSuccessMessage } = useState("");
-  const {handleSubmit} = useForm();
-  
+
   const onSubmit = (data, r) => {
     sendEmail(
       Service_ID,
@@ -53,7 +56,10 @@ const Contact = () => {
           </div>
           <div className="row">
             <div className="col-md-5">
-              <div class="lara-feature lara-feature-sm">
+              <div
+                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
+                data-animate-effect="fadeInLeft"
+              >
                 <div class="contact-icon">
                   <GrMail />
                 </div>
@@ -65,7 +71,10 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div class="lara-feature lara-feature-sm ">
+              <div
+                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
+                data-animate-effect="fadeInLeft"
+              >
                 <div class="contact-icon">
                   <FaPhoneAlt />
                 </div>
@@ -73,7 +82,10 @@ const Contact = () => {
                   <p>(416)-809-5993</p>
                 </div>
               </div>
-              <div class="lara-feature lara-feature-sm">
+              <div
+                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
+                data-animate-effect="fadeInLeft"
+              >
                 <div class="contact-icon">
                   <FaLocationArrow />
                 </div>
@@ -82,17 +94,30 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
             <div className="col-md-7 col-md-push-1">
               <div className="row">
-                <div className="col-md-10 col-md-offset-1 col-md-pull-1">
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="col-md-10 col-md-offset-1 col-md-pull-1 animate-box fadeInRight animated">
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <input
                         type="text"
                         className="form-control"
                         placeholder="Name"
-                        name="name"                                              
+                        name="name"
+                        aria-invalid={errors.name ? "true" : "false"}
+                        {...register("name", {
+                          required: "Please enter your name",
+                          maxLength: {
+                            value: 20,
+                            message:
+                              "Please enter a name with fewer than 20 characters",
+                          },
+                        })}
                       />
+                      <span className="error-message">
+                        {errors.name && errors.name.message}
+                      </span>
                     </div>
                     <div className="form-group">
                       <input
@@ -101,7 +126,20 @@ const Contact = () => {
                         className="form-control"
                         placeholder="Email"
                         name="email"
+                        aria-invalid={errors.email ? "true" : "false"}
+                        {...register("email", {
+                          required: "Please enter your email address",
+                          pattern: {
+                            value: "[^@ \t\r\n]+@[^@ \t\r\n]+.[^@ \t\r\n]+",
+                            message:
+                              "invalid email address, please provide a valid email address",
+                          },
+                        })}
                       ></input>
+                      <div className="line"></div>
+                      <span className="error-message">
+                        {errors.email && errors.email.message}
+                      </span>
                     </div>
                     <div className="form-group">
                       <input
@@ -110,7 +148,15 @@ const Contact = () => {
                         className="form-control"
                         placeholder="Subject"
                         name="subject"
+                        aria-invalid={errors.subject ? "true" : "false"}
+                        {...register("subject", {
+                          required: "Please enter the subject",
+                        })}
                       ></input>
+                      <div className="line"></div>
+                      <span className="error-message">
+                        {errors.subject && errors.subject.message}
+                      </span>
                     </div>
                     <div className="form-group">
                       <textarea
@@ -119,7 +165,15 @@ const Contact = () => {
                         className="form-control"
                         placeholder="Description"
                         name="description"
+                        aria-invalid={errors.description ? "true" : "false"}
+                        {...register("description", {
+                          required: "Please enter the description",
+                        })}
                       ></textarea>
+                      <div className="line"></div>
+                      <span className="error-message">
+                        {errors.subject && errors.subject.message}
+                      </span>
                     </div>
                     <div className="form-group">
                       <button
@@ -128,7 +182,7 @@ const Contact = () => {
                       >
                         contact me
                       </button>
-                    </div>{" "}
+                    </div>
                   </form>
                 </div>
               </div>
