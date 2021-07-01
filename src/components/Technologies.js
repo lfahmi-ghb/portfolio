@@ -99,7 +99,13 @@ const Technologies = () => {
                     </div>
                   </span>
                 </li>
-
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <h4 className="tools-heading text-center">Backend</h4>
+            <div className="lara-tools col-md-12 text-center">
+              <ul className="list-inline mx-auto skill-icon">
                 <li className="list-inline-item mx-3">
                   <span>
                     <div className="d-flex justify-content-center text-center skills-tile">
