@@ -224,6 +224,26 @@ padding-bottom: 3rem;
 }
 }
 
+.resume-button{
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF !important;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.resume-button:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+  color: #e1e1ff;
+}
+
+.button-wrapper{
+  padding-top: 10rem;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * C O N T A C T S * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 #lara-contact, #lara-home {
   padding-top: 4em;

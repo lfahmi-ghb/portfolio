@@ -1,4 +1,5 @@
 import React from "react";
+import resume from "../Lara's Resume.pdf"
 
 const Home = () => {
   return (
@@ -24,7 +25,14 @@ const Home = () => {
                   creativity and logic. Whenever possible, I also apply my
                   passion for developing products with Modern Javascript
                   Frameworks like Node.js and React.js
-                </p>       
+                </p>  
+                <div className="button-wrapper">
+                  <a href={resume} target="_blank">
+              <button className="btn-main-offer resume-button" type="submit">
+                Resume
+              </button>
+              </a>
+            </div>     
             </div>
           </div>
         </div>
