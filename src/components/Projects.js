@@ -1,4 +1,8 @@
 import React from "react";
+import portImg from "../music-app-proj.png";
+import restImg from "../resturants-project.png";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const Projects = () => {
   return (
@@ -14,6 +18,31 @@ const Projects = () => {
               <h2 className="sub-heading">Projects</h2>
               </ScrollAnimation>
             </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-6 projects-card">
+              <div class="card">
+               <a href="https://github.com/lfahmi-ghb/music-app" target="_blank"> <img src={portImg} class="card-img-top" alt="..." /></a>
+                <div class="card-body">
+                  <h5 class="card-title">Music App</h5>
+                  <p class="card-text">
+                  Full-Stack website developed using Angular, Bootstrap and MongoDB. Prompts the user to register, JWT was used for authentication.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-6 projects-card">
+              <div class="card">
+                <a href="https://github.com/lfahmi-ghb" target="_blank"><img src={restImg} class="card-img-top" alt="..." /></a>
+                <div class="card-body">
+                  <h5 class="card-title">API Demo</h5>
+                  <p class="card-text">
+                  Full-Stack website developed using React, MongoDB and Bootstrap.
+                  </p>
+                </div>
+              </div>
+            </div>            
         </div>
         </div>
       </section>
