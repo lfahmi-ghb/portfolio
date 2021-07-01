@@ -15,6 +15,7 @@ a, a:hover, a:focus, a:active {
   width: 100%;
   overflow: hidden;
   position: relative;
+  background-color: #000;
 }
 
 .container-wrap {
@@ -26,6 +27,12 @@ a, a:hover, a:focus, a:active {
   font-size: 2.5rem;
 }
 
+@media (max-width: 768px){
+  .lara-contact {
+    padding-top: 5em;
+    padding-bottom: 8em;
+  }
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * N A V   B A R * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -60,7 +67,7 @@ a, a:hover, a:focus, a:active {
   transition: 0.5s;
   overflow-y: inherit;
   z-index: 1001;
-  background-color: rgb(36, 34, 39);
+  background-color: #000;;
   height: 900px !important;
 }
 
@@ -120,13 +127,13 @@ a, a:hover, a:focus, a:active {
 }
 
 /*** navbar menu items ***/
-#lara-aside #felix-main-menu ul {
+#lara-aside #lara-main-menu ul {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-#lara-aside #felix-main-menu ul li {
+#lara-aside #lara-main-menu ul li {
   font-family: 'Oxygen', sans-serif !important;
   margin: 0 0 3rem 0;
   padding: 0;
@@ -137,7 +144,7 @@ a, a:hover, a:focus, a:active {
   letter-spacing: 1px;
 }
 
-#lara-aside #felix-main-menu ul li a {
+#lara-aside #lara-main-menu ul li a {
   color: var(--font-color);
   text-decoration: none;
   position: relative;
@@ -148,12 +155,12 @@ a, a:hover, a:focus, a:active {
 }
 
 
-#lara-aside #felix-main-menu {
+#lara-aside #lara-main-menu {
   display: block;
   width: 100%;
 }
 
-#lara-aside #felix-main-menu .collapse {
+#lara-aside #lara-main-menu .collapse {
   display: block !important;
 }
 
@@ -188,29 +195,31 @@ svg:not(:root).svg-inline--fa {
 }
 }
 
-@media screen and (max-width: 768px){
-  .felix-experience, .felix-skills, .felix-education, .lara-project, .felix-about, .felix-services, .lara-contact {
+@media (max-width: 768px){
+ .lara-contact {
     padding-top: 5em;
     padding-bottom: 8em;
   }
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * C O N T A C T S * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
 #lara-contact {
   padding-top: 4em;
   padding-bottom: 9em;
   clear: both;
   width: 100%;
   display: block;
+  color:#e1e1ff
 }
+
 
 .lara-narrow-content {
   padding: 0 2.5em;
 }
 
-.row{
-  display: block !important;
+
+.js .animate-box {
+  opacity: 0;
 }
 
 .lara-feature {
@@ -222,6 +231,7 @@ svg:not(:root).svg-inline--fa {
 }
 
 .lara-feature .contact-icon {
+  color:#e1e1ff;
   position: absolute;
   top: 0;
   left: 0;
@@ -235,6 +245,26 @@ svg:not(:root).svg-inline--fa {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
+@media (max-width: 992px){
+  body {
+    font-size: 16px;
+}
+}
+
+@media (min-width: 768px){
+  .col-md-7 {
+    flex: 0 0 auto;
+    width: 100.3333333333%;
+}
+}
+
+@media (min-width: 768px){
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 100.6666666667%;
+}
+}
+
 
 .lara-feature.lara-feature-sm .contact-text {
   margin-top: 30px;
@@ -246,7 +276,78 @@ svg:not(:root).svg-inline--fa {
   font-size: 1.5rem;
 }
 
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  border: transparent;
+  background: #f2f3f7;
+  height: 54px;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+
+.row{
+  display: block !important;
+}
+
 .lara-feature .contact-icon  {
   margin: 2.9rem 0;
 
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  color: #e1e1ff;
+}
+
+textarea.form-control {
+  height: 11rem  !important;
+}
+
+.form-control {
+  border: none !important;
+  background-color: rgb(250, 244, 244) !important;
+  box-shadow:none !important;
+}
+
+.contact-button{
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF !important;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.contact-button:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+  color: #e1e1ff;
+}
+
+.error-message{
+  color: rgb(250, 83, 83);
+}
+
+
+.sub-heading{
+  color: #e1e1ff;
 }

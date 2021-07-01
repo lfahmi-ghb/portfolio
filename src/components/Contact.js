@@ -48,7 +48,7 @@ const Contact = () => {
         <div className="lara-narrow-content">
           <div className="row">
             <div
-              className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box fadeInLeft animated"
+              className="col-md-6 col-md-offset-3 col-md-pull-3"
               data-animate-effect="fadeInLeft"
             >
               <h2 className="sub-heading">Contact</h2>
@@ -57,7 +57,7 @@ const Contact = () => {
           <div className="row">
             <div className="col-md-5">
               <div
-                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
+                class="lara-feature lara-feature-sm"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="contact-icon">
@@ -72,7 +72,7 @@ const Contact = () => {
                 </div>
               </div>
               <div
-                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
+                class="lara-feature lara-feature-sm"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="contact-icon">
@@ -83,7 +83,7 @@ const Contact = () => {
                 </div>
               </div>
               <div
-                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
+                class="lara-feature lara-feature-sm"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="contact-icon">
@@ -97,7 +97,7 @@ const Contact = () => {
 
             <div className="col-md-7 col-md-push-1">
               <div className="row">
-                <div className="col-md-10 col-md-offset-1 col-md-pull-1 animate-box fadeInRight animated">
+                <div className="col-md-10 col-md-offset-1 col-md-pull-1">
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <input

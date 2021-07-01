@@ -17,7 +17,7 @@ const Head= () => {
         <h1 className="Lara-Name"> Lara Fahmi </h1>
         <span class="position"><a href="#" target="_blank" rel="noopener noreferrer">Developer</a> in Toronto</span>
     </div>
-    <nav id="felix-main-menu" role="navigation" class="navbar">
+    <nav id="lara-main-menu" role="navigation" class="navbar">
         <div id="navbar" class="collapse">
           <ul>
             <li class="active">
