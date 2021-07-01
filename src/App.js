@@ -3,12 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Head from "./components/Head";
 import Contact from "./components/Contact"
+import Home from "./components/Home";
 function App() {
   return (
     <div className="App">
       <div id="lara-page">
         <div className="container-wrap">
           <Head />
+          <Home />
           <Contact/>
         </div>
       </div>

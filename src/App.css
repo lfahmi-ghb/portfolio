@@ -16,6 +16,7 @@ a, a:hover, a:focus, a:active {
   overflow: hidden;
   position: relative;
   background-color: #000;
+  color:#e1e1ff
 }
 
 .container-wrap {
@@ -28,7 +29,7 @@ a, a:hover, a:focus, a:active {
 }
 
 @media (max-width: 768px){
-  .lara-contact {
+  #lara-contact, #lara-home {
     padding-top: 5em;
     padding-bottom: 8em;
   }
@@ -202,8 +203,29 @@ svg:not(:root).svg-inline--fa {
   }
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * H O M E * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.main-info{
+padding-top: 6rem;
+}
+
+.home-content{
+padding-top: 6rem;
+
+}
+
+.home-h1{
+padding-bottom: 3rem;
+}
+
+@media (max-width: 768px){
+.lara-narrow-content {
+  padding: 0;
+}
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * C O N T A C T S * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-#lara-contact {
+#lara-contact, #lara-home {
   padding-top: 4em;
   padding-bottom: 9em;
   clear: both;

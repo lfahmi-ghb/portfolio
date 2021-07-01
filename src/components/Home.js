@@ -1,11 +1,36 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
-    return (
-        <div>
-            
+  return (
+    <div id="lara-main">
+      <section id="lara-home">
+        <div className="lara-narrow-content">
+          <div className="row home-content">
+            <h1 className="home-h1">Hi! I'm Lara</h1>
+            <div className="col-md-12">              
+                <p>
+                  I'm a full-stack developer, specializing in web development
+                  currently based in Toronto.
+                </p>
+                <p>
+                  Professionally, I tend to thrive when I have opportunities to
+                  express my creativity and insight in projects. I love being
+                  able to create solutions that will have a real impact on
+                  clients, I also love learning new impactful things. And most
+                  of all, I love to develop fun things!
+                </p>
+                <p>
+                  My place in the world seems to be at the intersection of
+                  creativity and logic. Whenever possible, I also apply my
+                  passion for developing products with Modern Javascript
+                  Frameworks like Node.js and React.js
+                </p>       
+            </div>
+          </div>
         </div>
-    )
-}
+      </section>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
