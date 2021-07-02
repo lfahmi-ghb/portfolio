@@ -3,6 +3,10 @@ import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import { GrPhone, GrMail, GrLocation } from "react-icons/gr";
 import { FaPhoneAlt, FaLocationArrow } from "react-icons/fa";
+
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
+
 const Contact = () => {
   const {
     register,
@@ -43,21 +47,26 @@ const Contact = () => {
   };
 
   return (
+    <div id="contacts" className="contacts">
     <div id="lara-main">
       <section id="lara-contact">
         <div className="lara-narrow-content">
           <div className="row">
             <div
-              className="col-md-6 col-md-offset-3 col-md-pull-3"
+              className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box fadeInLeft animated"
               data-animate-effect="fadeInLeft"
             >
+               <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" animateOnce={true}>
               <h2 className="sub-heading">Contact</h2>
+              </ScrollAnimation>
             </div>
           </div>
+          
           <div className="row">
+          <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
             <div className="col-md-5">
               <div
-                class="lara-feature lara-feature-sm"
+                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="contact-icon">
@@ -72,7 +81,7 @@ const Contact = () => {
                 </div>
               </div>
               <div
-                class="lara-feature lara-feature-sm"
+                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="contact-icon">
@@ -83,7 +92,7 @@ const Contact = () => {
                 </div>
               </div>
               <div
-                class="lara-feature lara-feature-sm"
+                class="lara-feature lara-feature-sm animate-box fadeInLeft animated"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="contact-icon">
@@ -94,10 +103,11 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInRight" animateOnce={true} >
             <div className="col-md-7 col-md-push-1">
               <div className="row">
-                <div className="col-md-10 col-md-offset-1 col-md-pull-1">
+                <div className="col-md-10 col-md-offset-1 col-md-pull-1 animate-box fadeInRight animated">
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                       <input
@@ -187,9 +197,11 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };

@@ -29,7 +29,7 @@ a, a:hover, a:focus, a:active {
 }
 
 @media (max-width: 768px){
-  #lara-contact, #lara-home {
+  #lara-contact, #lara-home, #lara-project {
     padding-top: 5em;
     padding-bottom: 8em;
   }
@@ -197,7 +197,7 @@ svg:not(:root).svg-inline--fa {
 }
 
 @media (max-width: 768px){
- .lara-contact {
+ .lara-contact{
     padding-top: 5em;
     padding-bottom: 8em;
   }
@@ -319,8 +319,64 @@ padding-bottom: 3rem;
   padding-top: 7rem;
 }
 
+/* * * * * * * * * * * * * * * * * * * * * * * P R O J E C T S * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.blog-entry {
+  width: 100%;
+  float: left;
+  background-color:#fff;
+  color: #424242;
+  margin-bottom: 3em;
+}
+
+.blog-entry .blog-img {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 25px;
+}
+
+
+@media (min-width: 576px){
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+}
+
+.card:hover .card-img-top{
+  animation:pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.blog-entry .img-desc h3 {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: auto;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Quicksand", Arial, sans-serif;
+}
+
+p {
+  margin-bottom: 1.5em !important;
+  font-size: 1.75rem;
+}
+
+.projects-card{
+  padding-bottom: 3rem;
+  padding-top:3rem;
+}
+
+.card{
+  background-color: #000;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * C O N T A C T S * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-#lara-contact, #lara-home {
+#lara-contact, #lara-home, #lara-project {
   padding-top: 4em;
   padding-bottom: 9em;
   clear: both;
